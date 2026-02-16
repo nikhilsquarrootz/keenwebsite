@@ -8,8 +8,8 @@ const fadeUp = {
 };
 
 const TEAM = [
-  { name: "Dr. Priya Sharma", role: "Head of Curriculum", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop", isHead: true },
-  { name: "Arjun Mehta", role: "Head of Engineering", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop", isHead: true },
+  { name: "Mo. Wajahat", role: "Head of Curriculum / Founder", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop", isHead: true },
+  { name: "Nikhil Yadav", role: "CEO, HyperneuronAI", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop", isHead: true },
 ];
 
 const VALUES = [
