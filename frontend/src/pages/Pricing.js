@@ -16,27 +16,19 @@ const fadeUp = {
 const PLANS = [
   {
     name: "Individual Course",
-    desc: "Perfect for focused learning on a single topic",
-    price: "From 9,999",
-    period: "one-time",
-    features: ["Full course access", "Hands-on projects", "Community access", "Certificate of completion", "Lifetime updates"],
+    desc: "Perfect for focused, deep learning on a single AI domain",
+    price: null,
+    period: "per course",
+    features: ["Full course access", "Hands-on projects", "Community access", "Certificate of completion", "Industry mentor sessions"],
     highlighted: false,
-  },
-  {
-    name: "Pro Bundle",
-    desc: "Master multiple AI domains with bundled savings",
-    price: "49,999",
-    period: "3 courses",
-    features: ["Choose any 3 courses", "Priority mentor access", "All individual features", "Career guidance sessions", "Interview prep kit", "Resume review"],
-    highlighted: true,
   },
   {
     name: "Enterprise",
-    desc: "Train your entire team with custom programs",
+    desc: "Train your entire team with custom AI programs",
     price: "Custom",
     period: "per team",
     features: ["Unlimited team seats", "Custom curriculum", "Dedicated account manager", "Progress dashboards", "API access", "On-site workshops"],
-    highlighted: false,
+    highlighted: true,
   },
 ];
 
@@ -61,7 +53,7 @@ export default function Pricing() {
         </motion.div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24" data-testid="pricing-plans">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-24" data-testid="pricing-plans">
           {PLANS.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -69,24 +61,33 @@ export default function Pricing() {
               transition={{ delay: i * 0.1 }}
               className={`rounded-[2rem] p-8 transition-all duration-500 hover:-translate-y-2 ${
                 plan.highlighted
-                  ? 'bg-keen-black text-white shadow-2xl shadow-black/20 scale-[1.02]'
+                  ? 'bg-keen-black text-white shadow-2xl shadow-black/20'
                   : 'glass-card border border-black/5'
               }`}
               data-testid={`plan-${plan.name.toLowerCase().replace(/\s/g, '-')}`}
             >
               {plan.highlighted && (
-                <Badge className="mb-4 bg-white/20 text-white border-0 rounded-full font-mono text-[10px]">Most Popular</Badge>
+                <Badge className="mb-4 bg-white/20 text-white border-0 rounded-full font-mono text-[10px]">Recommended</Badge>
               )}
               <h3 className={`font-heading font-bold text-xl tracking-tight mb-2 ${plan.highlighted ? 'text-white' : 'text-keen-black'}`}>
                 {plan.name}
               </h3>
               <p className={`text-sm mb-6 ${plan.highlighted ? 'text-white/60' : 'text-keen-tertiary'}`}>{plan.desc}</p>
-              <div className="mb-6">
-                <span className={`font-heading font-extrabold text-3xl ${plan.highlighted ? 'text-white' : 'text-keen-black'}`}>
-                  {plan.price === "Custom" ? "" : "₹"}{plan.price}
-                </span>
-                <span className={`text-sm ml-2 ${plan.highlighted ? 'text-white/40' : 'text-keen-tertiary'}`}>/{plan.period}</span>
-              </div>
+              {plan.price && (
+                <div className="mb-6">
+                  <span className={`font-heading font-extrabold text-3xl ${plan.highlighted ? 'text-white' : 'text-keen-black'}`}>
+                    {plan.price}
+                  </span>
+                  <span className={`text-sm ml-2 ${plan.highlighted ? 'text-white/40' : 'text-keen-tertiary'}`}>/{plan.period}</span>
+                </div>
+              )}
+              {!plan.price && (
+                <div className="mb-6">
+                  <span className={`font-heading font-bold text-lg ${plan.highlighted ? 'text-white' : 'text-keen-black'}`}>
+                    See course pricing below
+                  </span>
+                </div>
+              )}
               <ul className="space-y-3 mb-8">
                 {plan.features.map(f => (
                   <li key={f} className="flex items-center gap-2">
@@ -104,7 +105,7 @@ export default function Pricing() {
                   }`}
                   data-testid={`plan-cta-${plan.name.toLowerCase().replace(/\s/g, '-')}`}
                 >
-                  {plan.price === "Custom" ? "Contact Us" : "Get Started"} <ArrowRight size={14} className="ml-2" />
+                  {plan.price === "Custom" ? "Contact Us" : "Browse Courses"} <ArrowRight size={14} className="ml-2" />
                 </Button>
               </Link>
             </motion.div>
@@ -139,8 +140,8 @@ export default function Pricing() {
                       <Badge variant="outline" className="rounded-full text-[10px] border-keen-black/10">{course.level}</Badge>
                     </td>
                     <td className="py-4 px-4 text-right">
-                      <span className="font-mono font-bold text-sm text-keen-black">₹{course.price?.toLocaleString()}</span>
-                      <span className="font-mono text-xs text-keen-tertiary line-through ml-2">₹{course.original_price?.toLocaleString()}</span>
+                      <span className="font-mono font-bold text-sm text-keen-black">₹{course.price?.toLocaleString('en-IN')}</span>
+                      <span className="font-mono text-xs text-keen-tertiary line-through ml-2">₹{course.original_price?.toLocaleString('en-IN')}</span>
                     </td>
                     <td className="py-4 px-4 text-right">
                       <Link to={`/courses/${course.slug}`}>

@@ -116,8 +116,8 @@ export default function Courses() {
                     </div>
                     <div className="flex items-center justify-between pt-4 border-t border-keen-black/5">
                       <div className="flex items-baseline gap-2">
-                        <span className="font-mono font-bold text-keen-black">&#8377;{course.price?.toLocaleString()}</span>
-                        <span className="font-mono text-xs text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString()}</span>
+                        <span className="font-mono font-bold text-keen-black">&#8377;{course.price?.toLocaleString('en-IN')}</span>
+                        <span className="font-mono text-xs text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString('en-IN')}</span>
                       </div>
                       <span className="text-xs text-keen-secondary font-medium">{course.duration}</span>
                     </div>

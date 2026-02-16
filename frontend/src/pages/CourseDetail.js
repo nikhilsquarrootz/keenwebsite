@@ -185,8 +185,8 @@ export default function CourseDetail() {
               <motion.div {...fadeUp} className="glass-card rounded-3xl p-8" data-testid="pricing-card">
                 <div className="mb-6">
                   <div className="flex items-baseline gap-3 mb-1">
-                    <span className="font-heading font-extrabold text-3xl text-keen-black">&#8377;{course.price?.toLocaleString()}</span>
-                    <span className="font-mono text-sm text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString()}</span>
+                    <span className="font-heading font-extrabold text-3xl text-keen-black">&#8377;{course.price?.toLocaleString('en-IN')}</span>
+                    <span className="font-mono text-sm text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString('en-IN')}</span>
                   </div>
                   <Badge className="bg-keen-success/10 text-keen-success border-0 font-mono text-xs">{discount}% OFF</Badge>
                 </div>

@@ -63,9 +63,12 @@ export default function Home() {
           <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-8xl text-keen-black tracking-[-0.04em] leading-[0.95] text-balance mb-6">
             Learn AI.<br />Build the Future.
           </h1>
-          <p className="text-base md:text-lg text-keen-secondary max-w-2xl mx-auto leading-relaxed mb-10 font-body">
+          <p className="text-base md:text-lg text-keen-secondary max-w-2xl mx-auto leading-relaxed mb-4 font-body">
             Master Machine Learning, Deep Learning, Generative AI, and Agentic AI with
             industry-led courses designed for the real world.
+          </p>
+          <p className="text-sm text-keen-tertiary max-w-xl mx-auto mb-10 font-body italic">
+            Founded by top-tier engineers from IIT &amp; AWS with a singular vision — upskill every professional in the era of AI.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/courses">
@@ -142,8 +145,8 @@ export default function Home() {
                       <p className="text-sm text-keen-tertiary mb-4 line-clamp-2">{course.subtitle}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-baseline gap-2">
-                          <span className="font-mono font-bold text-keen-black">&#8377;{course.price?.toLocaleString()}</span>
-                          <span className="font-mono text-xs text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString()}</span>
+                          <span className="font-mono font-bold text-keen-black">&#8377;{course.price?.toLocaleString('en-IN')}</span>
+                          <span className="font-mono text-xs text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString('en-IN')}</span>
                         </div>
                         <span className="text-xs text-keen-secondary font-medium">{course.duration}</span>
                       </div>
