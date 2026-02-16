@@ -37,6 +37,16 @@ function AuthProvider({ children }) {
 
   useEffect(() => { checkAuth(); }, []);
 
+  // Hide injected platform badges
+  useEffect(() => {
+    const hideInterval = setInterval(() => {
+      document.querySelectorAll('a[href*="emergentagent"], div[class*="emergent"]').forEach(el => {
+        if (!el.closest('[data-testid="navbar"]')) el.style.display = 'none';
+      });
+    }, 500);
+    return () => clearInterval(hideInterval);
+  }, []);
+
   const logout = async () => {
     await axios.post(`${API}/auth/logout`, {}, { withCredentials: true });
     setUser(null);
