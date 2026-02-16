@@ -11,6 +11,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Pricing from "@/pages/Pricing";
 import AuthCallback from "@/pages/AuthCallback";
+import EnrollForm from "@/pages/EnrollForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -84,6 +85,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:slug" element={<CourseDetail />} />
+        <Route path="/enroll/:slug" element={<EnrollForm />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pricing" element={<Pricing />} />

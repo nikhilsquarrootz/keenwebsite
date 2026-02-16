@@ -112,7 +112,7 @@ COURSES = [
             {"module": "Advanced Topics", "topics": ["GANs", "Diffusion models", "Neural Architecture Search", "Distillation"], "weeks": "11-14"}
         ],
         "duration": "14 weeks", "level": "Advanced", "price": 199999, "original_price": 349999,
-        "image_url": "https://images.unsplash.com/photo-1684394944551-6c55a647337b?q=80&w=800&auto=format&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1549925245-f20a1bac6454?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["PyTorch", "CNNs", "Transformers", "GANs"],
         "instructor": {"name": "Arjun Mehta", "role": "Research Scientist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["Research-grade curriculum", "GPU labs included", "Paper reading group"]
@@ -202,7 +202,7 @@ COURSES = [
             {"module": "Production Deployment", "topics": ["Containerization", "Monitoring", "Safety guardrails", "Cost management"], "weeks": "10-12"}
         ],
         "duration": "12 weeks", "level": "Advanced", "price": 249999, "original_price": 449999,
-        "image_url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["LangGraph", "CrewAI", "AutoGen", "Docker"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["Multi-cloud ready", "3 agent frameworks", "Enterprise patterns"]
@@ -220,7 +220,7 @@ COURSES = [
             {"module": "Production & Scaling", "topics": ["ECS/EKS deployment", "CloudWatch monitoring", "A/B testing", "Multi-region"], "weeks": "9-10"}
         ],
         "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
-        "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1770169272345-9636d5ef2681?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lambda", "CloudFormation"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["AWS certified path", "Bedrock mastery", "Serverless focus"]
@@ -238,7 +238,7 @@ COURSES = [
             {"module": "Security & Governance", "topics": ["Content safety", "RBAC", "Compliance", "Audit logging"], "weeks": "9-10"}
         ],
         "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
-        "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1584381296550-99dfc0837d42?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["Azure OpenAI", "Copilot Studio", "Semantic Kernel", "Power Platform"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["Enterprise #1 choice", "Copilot Studio", "Azure certified"]
@@ -256,7 +256,7 @@ COURSES = [
             {"module": "Enterprise AIOps", "topics": ["Tool integration", "Custom dashboards", "ROI measurement", "Organizational adoption"], "weeks": "9-10"}
         ],
         "duration": "10 weeks", "level": "Intermediate", "price": 199999, "original_price": 349999,
-        "image_url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=800&auto=format&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1715079166921-af80e700d646?q=80&w=800&auto=format&fit=crop",
         "category": "Operations", "tags": ["Prometheus", "Grafana", "Python", "Kubernetes"],
         "instructor": {"name": "Vikram Singh", "role": "SRE Lead", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["DevOps + AI hybrid", "Real monitoring systems", "Auto-remediation"]
