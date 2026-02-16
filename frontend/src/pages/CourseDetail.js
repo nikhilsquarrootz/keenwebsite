@@ -29,68 +29,8 @@ export default function CourseDetail() {
       .catch(() => { setLoading(false); navigate('/courses'); });
   }, [slug, navigate]);
 
-  const handleEnroll = async () => {
-    if (!user) {
-      // REMINDER: DO NOT HARDCODE THE URL, OR ADD ANY FALLBACKS OR REDIRECT URLS, THIS BREAKS THE AUTH
-      const redirectUrl = window.location.origin + '/dashboard';
-      window.location.href = `https://auth.emergentagent.com/?redirect=${encodeURIComponent(redirectUrl)}`;
-      return;
-    }
-
-    setEnrolling(true);
-    try {
-      const orderRes = await axios.post(`${API}/orders/create`, { course_id: course.course_id }, { withCredentials: true });
-      const order = orderRes.data;
-
-      if (order.demo_mode) {
-        // Demo mode - simulate payment
-        const paymentId = `demo_pay_${Date.now()}`;
-        await axios.post(`${API}/orders/verify`, {
-          order_id: order.order_id,
-          payment_id: paymentId,
-          signature: ""
-        }, { withCredentials: true });
-        toast.success("Enrolled successfully!");
-        navigate('/dashboard');
-      } else {
-        // Razorpay mode
-        const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-        script.onload = () => {
-          const options = {
-            key: order.razorpay_key,
-            amount: order.amount * 100,
-            currency: order.currency,
-            name: "KEEN",
-            description: order.course?.title || "Course Purchase",
-            order_id: order.razorpay_order_id,
-            handler: async function (response) {
-              try {
-                await axios.post(`${API}/orders/verify`, {
-                  order_id: order.order_id,
-                  payment_id: response.razorpay_payment_id,
-                  signature: response.razorpay_signature
-                }, { withCredentials: true });
-                toast.success("Payment successful! You're enrolled.");
-                navigate('/dashboard');
-              } catch {
-                toast.error("Payment verification failed.");
-              }
-            },
-            prefill: { name: user.name, email: user.email },
-            theme: { color: "#050505" }
-          };
-          const rzp = new window.Razorpay(options);
-          rzp.open();
-        };
-        document.body.appendChild(script);
-      }
-    } catch (err) {
-      const msg = err.response?.data?.detail || "Something went wrong";
-      toast.error(msg);
-    } finally {
-      setEnrolling(false);
-    }
+  const handleEnroll = () => {
+    navigate(`/enroll/${slug}`);
   };
 
   if (loading) return (
@@ -193,11 +133,10 @@ export default function CourseDetail() {
 
                 <Button
                   onClick={handleEnroll}
-                  disabled={enrolling}
                   className="w-full rounded-full bg-keen-black text-white hover:bg-keen-black/90 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl h-12 text-base font-medium mb-4"
                   data-testid="enroll-button"
                 >
-                  {enrolling ? "Processing..." : user ? "Enroll Now" : "Sign In to Enroll"}
+                  Enroll Now
                 </Button>
 
                 <div className="space-y-3 text-sm text-keen-secondary">
