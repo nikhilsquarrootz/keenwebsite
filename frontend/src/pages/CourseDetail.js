@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "sonner";
 import axios from "axios";
-import { API, useAuth } from "@/App";
+import { API } from "@/App";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,10 +18,8 @@ const fadeUp = {
 export default function CourseDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { user } = useAuth();
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [enrolling, setEnrolling] = useState(false);
 
   useEffect(() => {
     axios.get(`${API}/courses/${slug}`)
