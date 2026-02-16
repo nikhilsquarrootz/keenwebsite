@@ -88,6 +88,20 @@ class KEENAPITester:
             print(f"   Found {len(courses)} courses")
             if len(courses) != 10:
                 print(f"   ⚠️  Expected 10 courses, got {len(courses)}")
+            
+            # Check pricing is in lakh range (100000-300000)
+            price_issues = []
+            for course in courses:
+                price = course.get('price', 0)
+                if price < 100000 or price > 300000:
+                    price_issues.append(f"{course.get('title', 'Unknown')}: ₹{price}")
+            
+            if price_issues:
+                print(f"   ⚠️  Courses with prices outside lakh range (1-3 lakh):")
+                for issue in price_issues:
+                    print(f"      - {issue}")
+            else:
+                print(f"   ✅ All course prices in lakh range (₹1,00,000 - ₹3,00,000)")
         
         # Test course categories
         success, categories = self.run_test("Get Categories", "GET", "categories", 200)
