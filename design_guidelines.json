@@ -1,0 +1,163 @@
+{
+  "identity": {
+    "name": "KEEN",
+    "aesthetic": "Warm Apple-Vision-Pro Minimalist",
+    "core_principles": [
+      "Liquid Glass: Surfaces feel like milled crystal, not plastic.",
+      "Warmth over sterility: Use organic beige backgrounds (#F8F7F2) instead of clinical white.",
+      "Typography as Texture: Bold, massive, black typography creates structure where lines usually would.",
+      "Fluid Motion: Everything arrives with a liquid, spring-based physics (no linear eases).",
+      "Content is King: 60% whitespace, 40% content. No clutter."
+    ]
+  },
+  "color_palette": {
+    "background": {
+      "base": "#F8F7F2",
+      "subtle": "#F2F0E9",
+      "surface": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#050505",
+      "secondary": "#525252",
+      "tertiary": "#A3A3A3",
+      "inverse": "#FFFFFF"
+    },
+    "glass": {
+      "surface": "rgba(255, 255, 255, 0.65)",
+      "border": "rgba(255, 255, 255, 0.4)",
+      "highlight": "rgba(255, 255, 255, 0.8)"
+    },
+    "accents": {
+      "primary": "#000000",
+      "secondary": "#E5E5E5",
+      "liquid_blue": "#D6E4FF",
+      "liquid_gold": "#F3E8D3",
+      "success": "#2D3A26",
+      "error": "#991B1B"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": "Plus Jakarta Sans, sans-serif",
+      "weights": {
+        "bold": 800,
+        "medium": 600
+      },
+      "tracking": "-0.04em",
+      "usage": "Use for all H1-H3. H1 must be at least text-6xl md:text-8xl."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": {
+        "regular": 400,
+        "medium": 500
+      },
+      "tracking": "-0.01em",
+      "usage": "High readability for course content and dashboard data."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Use sparingly for 'Course Code', 'Pricing', or 'AI Technical Terms'."
+    }
+  },
+  "ui_surfaces": {
+    "liquid_glass_card": "bg-white/60 backdrop-blur-2xl backdrop-saturate-150 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl",
+    "solid_card": "bg-white border border-black/5 shadow-sm rounded-2xl",
+    "active_state": "ring-2 ring-black/5 bg-white/80 transition-all duration-300",
+    "glass_button": "bg-black/90 text-white hover:bg-black hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full px-8 py-4 backdrop-blur-md"
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid": "grid-cols-12 gap-6",
+      "hero": "Full height (min-h-[90vh]), text-center or asymmetric split. Must use 3D Liquid Element.",
+      "bento_grid": "Use for 'Why KEEN' and 'Features'. Mix 1x1, 2x1, and 2x2 cells."
+    },
+    "dashboard": {
+      "grid": "grid-cols-1 md:grid-cols-4 gap-6",
+      "sidebar": "Fixed left, glassmorphism style (bg-white/50 backdrop-blur-xl).",
+      "content": "Dense but airy. Use 'Solid Card' style for data to ensure readability."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 font-medium px-8",
+      "secondary": "rounded-full bg-white/50 border border-black/10 hover:bg-white hover:border-black/20 transition-all duration-300 backdrop-blur-md"
+    },
+    "inputs": {
+      "style": "bg-white/50 border-black/10 focus:border-black/30 focus:ring-0 rounded-xl h-12 backdrop-blur-sm transition-all"
+    },
+    "cards": {
+      "course_card": "group relative overflow-hidden rounded-3xl bg-white/40 border border-white/60 backdrop-blur-md transition-all hover:bg-white/60 hover:shadow-2xl hover:shadow-black/5",
+      "pricing_card": "relative rounded-[2rem] border border-black/5 bg-white/30 backdrop-blur-xl p-8 transition-all hover:-translate-y-2"
+    },
+    "navigation": {
+      "navbar": "fixed top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-auto md:min-w-[400px] h-14 rounded-full bg-white/70 backdrop-blur-2xl border border-white/50 shadow-sm z-50 flex items-center justify-center px-2"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "defaults": {
+      "transition": {
+        "type": "spring",
+        "stiffness": 100,
+        "damping": 20,
+        "mass": 1
+      }
+    },
+    "animations": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 40 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true }
+      },
+      "liquid_hover": {
+        "scale": 1.02,
+        "transition": { "type": "spring", "stiffness": 400, "damping": 10 }
+      }
+    }
+  },
+  "visual_assets": {
+    "3d_library": {
+      "name": "react-three-fiber",
+      "usage": "Use MeshTransmissionMaterial for the 'Liquid Glass' hero element.",
+      "settings": {
+        "transmission": 1,
+        "roughness": 0,
+        "thickness": 0.5,
+        "ior": 1.5,
+        "chromaticAberration": 0.04
+      }
+    },
+    "images": {
+      "source": "image_selector_tool",
+      "style": "Minimalist, high-key photography, abstract technological forms, warm lighting.",
+      "queries": [
+        "abstract glass waves beige",
+        "minimalist office desk plant",
+        "happy student using laptop cafe",
+        "abstract neural network white",
+        "clean architectural detail",
+        "woman working on laptop minimalist"
+      ]
+    }
+  },
+  "image_urls": {
+     "hero_background": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+     "course_ml": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop",
+     "course_nlp": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop",
+     "course_cv": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?q=80&w=2670&auto=format&fit=crop",
+     "instructor_1": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
+     "instructor_2": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop"
+  },
+  "universal_guidelines": [
+    "NEVER use default Tailwind blue colors. Stick to the Warm Beige + Black palette.",
+    "Glass effects MUST use 'backdrop-saturate-150' to avoid looking washed out.",
+    "Spacing is luxury. Use 'gap-8' or 'gap-12' for layout grids.",
+    "Do not use generic 'Inter' for headings. Use 'Plus Jakarta Sans'.",
+    "All interactive elements must have a 'data-testid' for testing.",
+    "Use 'sonner' for toasts.",
+    "For the Hero section, implement the R3F Liquid Glass donut/blob if possible, otherwise use a high-quality glass render image.",
+    "Ensure 'text-balance' is used on all headlines for better typography."
+  ],
+  "instructions_to_main_agent": "1. Install 'framer-motion', '@react-three/fiber', '@react-three/drei', 'lucide-react', 'clsx', 'tailwind-merge'. 2. Update 'tailwind.config.js' to include the new colors and font families. 3. Create a 'LiquidGlass' generic component that wraps content in the glass style defined in 'ui_surfaces'. 4. Build the Home page first with the 3D Hero. 5. Build the Course Catalog with the Bento Grid."
+}
