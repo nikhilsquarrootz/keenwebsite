@@ -118,14 +118,14 @@ html {
 }
 
 /* Hide platform badge */
-div[id*="emergent-badge"],
-div[class*="emergent"],
-a[href*="emergentagent.com"]:not([data-testid]) {
+#emergent-badge {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
-}
-iframe[src*="emergent"] {
-    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    z-index: -9999 !important;
 }
