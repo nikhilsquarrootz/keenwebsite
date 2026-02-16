@@ -8,16 +8,14 @@ import axios from "axios";
 import { API } from "@/App";
 
 const fadeUp = {
-  initial: { opacity: 0, y: 40 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
   transition: { type: "spring", stiffness: 100, damping: 20 }
 };
 
 const stagger = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  initial: { opacity: 0, y: 15 },
+  animate: { opacity: 1, y: 0 },
 };
 
 const STATS = [

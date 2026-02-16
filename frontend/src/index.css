@@ -116,3 +116,16 @@ html {
 .text-balance {
     text-wrap: balance;
 }
+
+/* Hide platform badge */
+div[id*="emergent-badge"],
+div[class*="emergent"],
+a[href*="emergentagent.com"]:not([data-testid]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+iframe[src*="emergent"] {
+    display: none !important;
+}

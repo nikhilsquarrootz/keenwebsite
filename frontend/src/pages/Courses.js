@@ -8,9 +8,8 @@ import axios from "axios";
 import { API } from "@/App";
 
 const stagger = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  initial: { opacity: 0, y: 15 },
+  animate: { opacity: 1, y: 0 },
 };
 
 export default function Courses() {

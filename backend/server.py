@@ -92,7 +92,7 @@ COURSES = [
             {"module": "Ensemble Methods", "topics": ["Bagging", "Boosting", "XGBoost", "Hyperparameter Optimization"], "weeks": "8-9"},
             {"module": "Production ML", "topics": ["Model deployment", "MLflow", "Monitoring", "A/B Testing"], "weeks": "10-12"}
         ],
-        "duration": "12 weeks", "level": "Intermediate", "price": 14999, "original_price": 24999,
+        "duration": "12 weeks", "level": "Intermediate", "price": 149999, "original_price": 249999,
         "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["Python", "scikit-learn", "XGBoost", "MLflow"],
         "instructor": {"name": "Dr. Priya Sharma", "role": "Principal ML Engineer", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
@@ -111,7 +111,7 @@ COURSES = [
             {"module": "Transformers", "topics": ["Self-attention", "BERT", "GPT architecture", "Vision Transformers"], "weeks": "8-10"},
             {"module": "Advanced Topics", "topics": ["GANs", "Diffusion models", "Neural Architecture Search", "Distillation"], "weeks": "11-14"}
         ],
-        "duration": "14 weeks", "level": "Advanced", "price": 19999, "original_price": 34999,
+        "duration": "14 weeks", "level": "Advanced", "price": 199999, "original_price": 349999,
         "image_url": "https://images.unsplash.com/photo-1684394944551-6c55a647337b?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["PyTorch", "CNNs", "Transformers", "GANs"],
         "instructor": {"name": "Arjun Mehta", "role": "Research Scientist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
@@ -129,7 +129,7 @@ COURSES = [
             {"module": "Deep NLP", "topics": ["Seq2Seq", "Attention", "BERT fine-tuning", "Text generation"], "weeks": "5-7"},
             {"module": "LLMs & Applications", "topics": ["GPT architecture", "Prompt engineering", "RAG systems", "Fine-tuning LLMs"], "weeks": "8-10"}
         ],
-        "duration": "10 weeks", "level": "Intermediate", "price": 16999, "original_price": 29999,
+        "duration": "10 weeks", "level": "Intermediate", "price": 169999, "original_price": 299999,
         "image_url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["HuggingFace", "BERT", "GPT", "LLMs"],
         "instructor": {"name": "Dr. Priya Sharma", "role": "Principal ML Engineer", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
@@ -147,7 +147,7 @@ COURSES = [
             {"module": "Image Segmentation", "topics": ["Semantic segmentation", "Instance segmentation", "SAM", "Panoptic"], "weeks": "6-7"},
             {"module": "Advanced Vision", "topics": ["3D Vision", "Video analysis", "Multimodal models", "Deployment"], "weeks": "8-10"}
         ],
-        "duration": "10 weeks", "level": "Advanced", "price": 17999, "original_price": 29999,
+        "duration": "10 weeks", "level": "Advanced", "price": 179999, "original_price": 299999,
         "image_url": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["OpenCV", "YOLO", "PyTorch", "3D Vision"],
         "instructor": {"name": "Arjun Mehta", "role": "Research Scientist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
@@ -165,7 +165,7 @@ COURSES = [
             {"module": "Image & Multimodal", "topics": ["Stable Diffusion", "DALL-E", "ControlNet", "Multimodal models"], "weeks": "7-9"},
             {"module": "Building AI Products", "topics": ["RAG systems", "AI Agents", "API design", "Scaling & Monitoring"], "weeks": "10-12"}
         ],
-        "duration": "12 weeks", "level": "Intermediate", "price": 21999, "original_price": 39999,
+        "duration": "12 weeks", "level": "Intermediate", "price": 219999, "original_price": 399999,
         "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
         "category": "Generative AI", "tags": ["GPT", "Stable Diffusion", "RAG", "AI Agents"],
         "instructor": {"name": "Kavya Nair", "role": "GenAI Lead", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
@@ -183,7 +183,7 @@ COURSES = [
             {"module": "Production Prompting", "topics": ["Prompt templates", "Output parsing", "Guardrails", "Evaluation"], "weeks": "5-6"},
             {"module": "Prompt Ops", "topics": ["A/B testing prompts", "Version control", "Cost optimization", "Multi-model strategies"], "weeks": "7-8"}
         ],
-        "duration": "8 weeks", "level": "Beginner", "price": 9999, "original_price": 17999,
+        "duration": "8 weeks", "level": "Beginner", "price": 109999, "original_price": 179999,
         "image_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
         "category": "Generative AI", "tags": ["GPT-5", "Claude", "Gemini", "LangChain"],
         "instructor": {"name": "Kavya Nair", "role": "GenAI Lead", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
@@ -201,7 +201,7 @@ COURSES = [
             {"module": "Multi-Agent Systems", "topics": ["Agent orchestration", "Communication protocols", "Shared memory", "Conflict resolution"], "weeks": "7-9"},
             {"module": "Production Deployment", "topics": ["Containerization", "Monitoring", "Safety guardrails", "Cost management"], "weeks": "10-12"}
         ],
-        "duration": "12 weeks", "level": "Advanced", "price": 24999, "original_price": 44999,
+        "duration": "12 weeks", "level": "Advanced", "price": 249999, "original_price": 449999,
         "image_url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["LangGraph", "CrewAI", "AutoGen", "Docker"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
@@ -219,7 +219,7 @@ COURSES = [
             {"module": "Serverless AI Pipelines", "topics": ["Lambda functions", "Step Functions", "EventBridge", "API Gateway"], "weeks": "6-8"},
             {"module": "Production & Scaling", "topics": ["ECS/EKS deployment", "CloudWatch monitoring", "A/B testing", "Multi-region"], "weeks": "9-10"}
         ],
-        "duration": "10 weeks", "level": "Intermediate", "price": 22999, "original_price": 39999,
+        "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
         "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lambda", "CloudFormation"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
@@ -237,7 +237,7 @@ COURSES = [
             {"module": "Enterprise Integration", "topics": ["Power Platform", "Teams integration", "SharePoint", "Dynamics 365"], "weeks": "6-8"},
             {"module": "Security & Governance", "topics": ["Content safety", "RBAC", "Compliance", "Audit logging"], "weeks": "9-10"}
         ],
-        "duration": "10 weeks", "level": "Intermediate", "price": 22999, "original_price": 39999,
+        "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
         "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["Azure OpenAI", "Copilot Studio", "Semantic Kernel", "Power Platform"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
@@ -255,7 +255,7 @@ COURSES = [
             {"module": "Automated Remediation", "topics": ["Runbook automation", "Self-healing systems", "Change intelligence", "Capacity planning"], "weeks": "6-8"},
             {"module": "Enterprise AIOps", "topics": ["Tool integration", "Custom dashboards", "ROI measurement", "Organizational adoption"], "weeks": "9-10"}
         ],
-        "duration": "10 weeks", "level": "Intermediate", "price": 19999, "original_price": 34999,
+        "duration": "10 weeks", "level": "Intermediate", "price": 199999, "original_price": 349999,
         "image_url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=800&auto=format&fit=crop",
         "category": "Operations", "tags": ["Prometheus", "Grafana", "Python", "Kubernetes"],
         "instructor": {"name": "Vikram Singh", "role": "SRE Lead", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
