@@ -8,10 +8,8 @@ const fadeUp = {
 };
 
 const TEAM = [
-  { name: "Dr. Priya Sharma", role: "Head of ML Programs", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" },
-  { name: "Arjun Mehta", role: "Head of Deep Learning", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
-  { name: "Kavya Nair", role: "Head of GenAI Programs", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" },
-  { name: "Rohan Gupta", role: "Head of Agentic AI", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
+  { name: "Dr. Priya Sharma", role: "Head of Curriculum", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop", isHead: true },
+  { name: "Arjun Mehta", role: "Head of Engineering", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop", isHead: true },
 ];
 
 const VALUES = [
@@ -31,9 +29,12 @@ export default function About() {
             <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-keen-black tracking-tight text-balance mb-6">
               Building the World's Best AI Education
             </h1>
-            <p className="text-base md:text-lg text-keen-secondary max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-keen-secondary max-w-2xl mx-auto leading-relaxed mb-4">
               KEEN was founded with a singular vision: make world-class AI education accessible to every ambitious learner.
               We believe the next generation of AI engineers shouldn't need a Stanford degree — they need the right curriculum, the right mentors, and relentless hands-on practice.
+            </p>
+            <p className="text-sm text-keen-tertiary max-w-xl mx-auto leading-relaxed italic">
+              Founded by top-tier engineers from IIT &amp; AWS, KEEN brings decades of combined experience in building AI systems at scale — now dedicated to upskilling every professional in the era of AI.
             </p>
           </motion.div>
         </div>
@@ -94,7 +95,7 @@ export default function About() {
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-keen-black tracking-tight">Meet Our Faculty</h2>
             <p className="text-base text-keen-secondary mt-4">Engineers and researchers from the world's top AI teams.</p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
             {TEAM.map((t, i) => (
               <motion.div key={t.name} {...fadeUp} transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-3xl p-6 text-center hover:bg-white/60 transition-all duration-300"
@@ -104,6 +105,15 @@ export default function About() {
                 <p className="text-xs text-keen-tertiary mt-1">{t.role}</p>
               </motion.div>
             ))}
+            <motion.div {...fadeUp} transition={{ delay: 0.2 }}
+              className="glass-card rounded-3xl p-6 text-center hover:bg-white/60 transition-all duration-300 flex flex-col items-center justify-center"
+            >
+              <div className="w-20 h-20 rounded-2xl bg-keen-black/5 flex items-center justify-center mx-auto mb-4">
+                <Users size={32} className="text-keen-black/40" />
+              </div>
+              <h3 className="font-heading font-bold text-sm text-keen-black">+30 Faculty</h3>
+              <p className="text-xs text-keen-tertiary mt-1">From IIT, AWS, Google, Meta &amp; more</p>
+            </motion.div>
           </div>
         </div>
       </section>
