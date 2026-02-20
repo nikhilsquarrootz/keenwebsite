@@ -53,9 +53,9 @@ export default function Contact() {
           {/* Contact Info */}
           <motion.div {...fadeUp} className="space-y-5">
             {[
-              { icon: Mail, label: "Email", value: "hello@Squarerootz.ai" },
+              { icon: Mail, label: "Email", value: "mo.wajahat@Squarerootz.ai" },
               { icon: MapPin, label: "Office", value: "Bengaluru, India" },
-              { icon: Phone, label: "Phone", value: "+91 80 1234 5678" },
+              { icon: Phone, label: "Phone", value: "+91 90058-11616" },
             ].map(item => (
               <div key={item.label} className="glass-card rounded-2xl p-5 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-Squarerootz-black/5 flex items-center justify-center flex-shrink-0">
