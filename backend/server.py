@@ -87,12 +87,12 @@ COURSES = [    {
         "syllabus": [
             {"module": "AWS AI Foundations", "topics": ["Bedrock overview", "SageMaker basics", "IAM for AI", "Cost optimization"], "weeks": "1-2"},
             {"module": "Bedrock Agents", "topics": ["Agent creation", "Knowledge bases", "Action groups", "Guardrails"], "weeks": "3-5"},
-            {"module": "Serverless AI Pipelines", "topics": ["Lambda functions", "Step Functions", "EventBridge", "API Gateway"], "weeks": "6-8"},
+            {"module": "Serverless AI Pipelines", "topics": ["Amazon Lex","Lambda functions", "Step Functions", "EventBridge", "API Gateway"], "weeks": "6-8"},
             {"module": "Production & Scaling", "topics": ["ECS/EKS deployment", "CloudWatch monitoring", "A/B testing", "Multi-region"], "weeks": "9-10"}
         ],
         "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
         "image_url": "https://images.unsplash.com/photo-1770169272345-9636d5ef2681?q=80&w=800&auto=format&fit=crop",
-        "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lambda", "CloudFormation"],
+        "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lex","Lambda", "CloudFormation"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["AWS certified path", "Bedrock mastery", "Serverless focus"],
         "popular": 1
