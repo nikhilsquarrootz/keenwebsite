@@ -18,7 +18,7 @@ module.exports = {
                                 subtle: '#F2F0E9',
                                 surface: '#FFFFFF',
                         },
-                        keen: {
+                        Squarerootz: {
                                 black: '#050505',
                                 secondary: '#525252',
                                 tertiary: '#A3A3A3',

@@ -3,7 +3,7 @@ import sys
 from datetime import datetime
 import json
 
-class KEENAPITester:
+class SquarerootzAPITester:
     def __init__(self, base_url="https://ai-learn-hub-150.preview.emergentagent.com"):
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
@@ -218,10 +218,10 @@ class KEENAPITester:
 
 def main():
     """Main test runner"""
-    print("KEEN AI EdTech Platform - Backend API Testing")
+    print("Squarerootz AI EdTech Platform - Backend API Testing")
     print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    tester = KEENAPITester()
+    tester = SquarerootzAPITester()
     
     # Run all test suites
     tester.test_public_endpoints()

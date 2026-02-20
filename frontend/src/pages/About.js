@@ -8,8 +8,8 @@ const fadeUp = {
 };
 
 const TEAM = [
-  { name: "Mo. Wajahat", role: "Head of Curriculum / Founder", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop", isHead: true },
-  { name: "Nikhil Yadav", role: "CEO, HyperneuronAI", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop", isHead: true },
+  { name: "Mo. Wajahat", role: "Founder-Head of Curriculum (IIT)", image: "/images/wajahat.jpeg", isHead: true },
+  { name: "Nikhil Yadav", role: "CEO, HyperneuronAI", image: "/images/nikhil.jpeg", isHead: true },
 ];
 
 const VALUES = [
@@ -26,15 +26,15 @@ export default function About() {
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div {...fadeUp}>
-            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-keen-black tracking-tight text-balance mb-6">
+            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-Squarerootz-black tracking-tight text-balance mb-6">
               Building the World's Best AI Education
             </h1>
-            <p className="text-base md:text-lg text-keen-secondary max-w-2xl mx-auto leading-relaxed mb-4">
-              KEEN was founded with a singular vision: make world-class AI education accessible to every ambitious learner.
+            <p className="text-base md:text-lg text-Squarerootz-secondary max-w-2xl mx-auto leading-relaxed mb-4">
+              Squarerootz was founded with a singular vision: make world-class AI education accessible to every ambitious learner.
               We believe the next generation of AI engineers shouldn't need a Stanford degree — they need the right curriculum, the right mentors, and relentless hands-on practice.
             </p>
-            <p className="text-sm text-keen-tertiary max-w-xl mx-auto leading-relaxed italic">
-              Founded by top-tier engineers from IIT &amp; AWS, KEEN brings decades of combined experience in building AI systems at scale — now dedicated to upskilling every professional in the era of AI.
+            <p className="text-sm text-Squarerootz-tertiary max-w-xl mx-auto leading-relaxed italic">
+              Founded by top-tier engineers from IIT &amp; AWS, Squarerootz brings decades of combined experience in building AI systems at scale — now dedicated to upskilling every professional in the era of AI.
             </p>
           </motion.div>
         </div>
@@ -45,21 +45,21 @@ export default function About() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div {...fadeUp} className="glass-card rounded-3xl p-10">
-              <div className="w-12 h-12 rounded-2xl bg-keen-black/5 flex items-center justify-center mb-6">
-                <Lightbulb size={22} className="text-keen-black" />
+              <div className="w-12 h-12 rounded-2xl bg-Squarerootz-black/5 flex items-center justify-center mb-6">
+                <Lightbulb size={22} className="text-Squarerootz-black" />
               </div>
-              <h2 className="font-heading font-bold text-2xl text-keen-black tracking-tight mb-4">Our Mission</h2>
-              <p className="text-sm text-keen-secondary leading-relaxed">
+              <h2 className="font-heading font-bold text-2xl text-Squarerootz-black tracking-tight mb-4">Our Mission</h2>
+              <p className="text-sm text-Squarerootz-secondary leading-relaxed">
                 To create 100,000 production-ready AI engineers by 2027 through industry-led, project-based learning programs
                 that bridge the gap between academic theory and real-world AI systems.
               </p>
             </motion.div>
             <motion.div {...fadeUp} className="glass-card rounded-3xl p-10">
-              <div className="w-12 h-12 rounded-2xl bg-keen-black/5 flex items-center justify-center mb-6">
-                <Eye size={22} className="text-keen-black" />
+              <div className="w-12 h-12 rounded-2xl bg-Squarerootz-black/5 flex items-center justify-center mb-6">
+                <Eye size={22} className="text-Squarerootz-black" />
               </div>
-              <h2 className="font-heading font-bold text-2xl text-keen-black tracking-tight mb-4">Our Vision</h2>
-              <p className="text-sm text-keen-secondary leading-relaxed">
+              <h2 className="font-heading font-bold text-2xl text-Squarerootz-black tracking-tight mb-4">Our Vision</h2>
+              <p className="text-sm text-Squarerootz-secondary leading-relaxed">
                 A world where anyone with curiosity and determination can learn, build, and deploy AI systems
                 that solve real problems — regardless of their background, location, or credentials.
               </p>
@@ -72,16 +72,16 @@ export default function About() {
       <section className="px-6 py-20">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-14">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-keen-black tracking-tight">Our Values</h2>
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-Squarerootz-black tracking-tight">Our Values</h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {VALUES.map((v, i) => (
               <motion.div key={v.title} {...fadeUp} transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-3xl p-8 hover:bg-white/60 transition-all duration-300"
               >
-                <v.icon size={24} className="text-keen-black mb-4" />
-                <h3 className="font-heading font-bold text-lg text-keen-black tracking-tight mb-2">{v.title}</h3>
-                <p className="text-sm text-keen-secondary leading-relaxed">{v.desc}</p>
+                <v.icon size={24} className="text-Squarerootz-black mb-4" />
+                <h3 className="font-heading font-bold text-lg text-Squarerootz-black tracking-tight mb-2">{v.title}</h3>
+                <p className="text-sm text-Squarerootz-secondary leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -92,8 +92,8 @@ export default function About() {
       <section className="px-6 py-20 bg-beige-subtle">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-14">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-keen-black tracking-tight">Meet Our Faculty</h2>
-            <p className="text-base text-keen-secondary mt-4">Engineers and researchers from the world's top AI teams.</p>
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-Squarerootz-black tracking-tight">Meet Our Faculty</h2>
+            <p className="text-base text-Squarerootz-secondary mt-4">Engineers and researchers from the world's top AI teams.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
             {TEAM.map((t, i) => (
@@ -101,18 +101,18 @@ export default function About() {
                 className="glass-card rounded-3xl p-6 text-center hover:bg-white/60 transition-all duration-300"
               >
                 <img src={t.image} alt={t.name} className="w-20 h-20 rounded-2xl object-cover mx-auto mb-4" />
-                <h3 className="font-heading font-bold text-sm text-keen-black">{t.name}</h3>
-                <p className="text-xs text-keen-tertiary mt-1">{t.role}</p>
+                <h3 className="font-heading font-bold text-sm text-Squarerootz-black">{t.name}</h3>
+                <p className="text-xs text-Squarerootz-tertiary mt-1">{t.role}</p>
               </motion.div>
             ))}
             <motion.div {...fadeUp} transition={{ delay: 0.2 }}
               className="glass-card rounded-3xl p-6 text-center hover:bg-white/60 transition-all duration-300 flex flex-col items-center justify-center"
             >
-              <div className="w-20 h-20 rounded-2xl bg-keen-black/5 flex items-center justify-center mx-auto mb-4">
-                <Users size={32} className="text-keen-black/40" />
+              <div className="w-20 h-20 rounded-2xl bg-Squarerootz-black/5 flex items-center justify-center mx-auto mb-4">
+                <Users size={32} className="text-Squarerootz-black/40" />
               </div>
-              <h3 className="font-heading font-bold text-sm text-keen-black">+30 Faculty</h3>
-              <p className="text-xs text-keen-tertiary mt-1">From IIT, AWS, Google, Meta &amp; more</p>
+              <h3 className="font-heading font-bold text-sm text-Squarerootz-black">+30 Faculty</h3>
+              <p className="text-xs text-Squarerootz-tertiary mt-1">From IIT, AWS, Google, Meta &amp; more</p>
             </motion.div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function About() {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <motion.div {...fadeUp} className="glass-card rounded-3xl p-12 text-center">
-            <h2 className="font-heading font-extrabold text-3xl text-keen-black tracking-tight mb-10">KEEN in Numbers</h2>
+            <h2 className="font-heading font-extrabold text-3xl text-Squarerootz-black tracking-tight mb-10">Squarerootz in Numbers</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { value: "10,000+", label: "Learners" },
@@ -131,8 +131,8 @@ export default function About() {
                 { value: "50+", label: "Industry Mentors" },
               ].map(n => (
                 <div key={n.label}>
-                  <div className="font-heading font-extrabold text-3xl text-keen-black">{n.value}</div>
-                  <div className="text-xs text-keen-tertiary mt-1">{n.label}</div>
+                  <div className="font-heading font-extrabold text-3xl text-Squarerootz-black">{n.value}</div>
+                  <div className="text-xs text-Squarerootz-tertiary mt-1">{n.label}</div>
                 </div>
               ))}
             </div>

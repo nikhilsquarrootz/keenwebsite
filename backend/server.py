@@ -78,9 +78,27 @@ class SessionInput(BaseModel):
     session_id: str
 
 # ---- Course Data ----
-COURSES = [
+COURSES = [    {
+        "course_id": "aws-101", "slug": "aws-agentic-ai",
+        "title": "AWS Agentic AI",
+        "subtitle": "Build AI agents on Amazon's cloud ecosystem",
+        "description": "Master building and deploying AI agents on AWS. Learn Bedrock, SageMaker, Lambda, and AWS-native agent patterns.",
+        "why_select": ["Official AWS-aligned curriculum", "Master Amazon Bedrock agents and knowledge bases", "Build serverless AI pipelines with Lambda & Step Functions", "AWS certification preparation included"],
+        "syllabus": [
+            {"module": "AWS AI Foundations", "topics": ["Bedrock overview", "SageMaker basics", "IAM for AI", "Cost optimization"], "weeks": "1-2"},
+            {"module": "Bedrock Agents", "topics": ["Agent creation", "Knowledge bases", "Action groups", "Guardrails"], "weeks": "3-5"},
+            {"module": "Serverless AI Pipelines", "topics": ["Lambda functions", "Step Functions", "EventBridge", "API Gateway"], "weeks": "6-8"},
+            {"module": "Production & Scaling", "topics": ["ECS/EKS deployment", "CloudWatch monitoring", "A/B testing", "Multi-region"], "weeks": "9-10"}
+        ],
+        "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
+        "image_url": "https://images.unsplash.com/photo-1770169272345-9636d5ef2681?q=80&w=800&auto=format&fit=crop",
+        "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lambda", "CloudFormation"],
+        "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
+        "highlights": ["AWS certified path", "Bedrock mastery", "Serverless focus"],
+        "popular": 1
+    },
     {
-        "course_id": "ml-101", "slug": "machine-learning",
+        "course_id": "ml-801", "slug": "machine-learning",
         "title": "Machine Learning",
         "subtitle": "Master the fundamentals of ML algorithms and techniques",
         "description": "Dive deep into machine learning with hands-on projects. Learn regression, classification, clustering, and ensemble methods with real-world datasets.",
@@ -95,8 +113,9 @@ COURSES = [
         "duration": "12 weeks", "level": "Intermediate", "price": 149999, "original_price": 249999,
         "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["Python", "scikit-learn", "XGBoost", "MLflow"],
-        "instructor": {"name": "Dr. Priya Sharma", "role": "Principal ML Engineer", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["95% placement rate", "Industry mentors", "Lifetime access"]
+        "instructor": {"name": "Mo. Wajahat", "role": "HOD Squarerootz" ,"image":"/images/wajahat.jpeg"},
+        "highlights": ["95% placement rate", "Industry mentors", "Lifetime access"],
+        "popular": 0
     },
     {
         "course_id": "dl-201", "slug": "deep-learning",
@@ -114,7 +133,7 @@ COURSES = [
         "duration": "14 weeks", "level": "Advanced", "price": 199999, "original_price": 349999,
         "image_url": "https://images.unsplash.com/photo-1549925245-f20a1bac6454?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["PyTorch", "CNNs", "Transformers", "GANs"],
-        "instructor": {"name": "Arjun Mehta", "role": "Research Scientist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
+      "instructor": {"name": "Mo. Wajahat", "role": "HOD Squarerootz" ,"image":"https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["Research-grade curriculum", "GPU labs included", "Paper reading group"]
     },
     {
@@ -132,7 +151,7 @@ COURSES = [
         "duration": "10 weeks", "level": "Intermediate", "price": 169999, "original_price": 299999,
         "image_url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["HuggingFace", "BERT", "GPT", "LLMs"],
-        "instructor": {"name": "Dr. Priya Sharma", "role": "Principal ML Engineer", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
+        "instructor": {"name": "Mo. Wajahat", "role": "HOD Squarerootz", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
         "highlights": ["LLM-focused", "Industry projects", "Research club access"]
     },
     {
@@ -150,8 +169,9 @@ COURSES = [
         "duration": "10 weeks", "level": "Advanced", "price": 179999, "original_price": 299999,
         "image_url": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?q=80&w=800&auto=format&fit=crop",
         "category": "Core AI", "tags": ["OpenCV", "YOLO", "PyTorch", "3D Vision"],
-        "instructor": {"name": "Arjun Mehta", "role": "Research Scientist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["Autonomous driving project", "SAM & YOLO mastery", "Edge deployment"]
+        "instructor": {"name": "Mo. Wajahat", "role": "HOD Squarerootz", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
+        "highlights": ["Autonomous driving project", "SAM & YOLO mastery", "Edge deployment"],
+        "popular": 0
     },
     {
         "course_id": "gai-501", "slug": "generative-ai",
@@ -168,8 +188,9 @@ COURSES = [
         "duration": "12 weeks", "level": "Intermediate", "price": 219999, "original_price": 399999,
         "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
         "category": "Generative AI", "tags": ["GPT", "Stable Diffusion", "RAG", "AI Agents"],
-        "instructor": {"name": "Kavya Nair", "role": "GenAI Lead", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["Build 8 AI products", "API integration mastery", "Startup mentorship"]
+        "instructor": {"name": "Nikhil Yadav", "role": "Cofounder HypeneuronAi", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
+        "highlights": ["Build 8 AI products", "API integration mastery", "Startup mentorship"],
+        "popular": 1
     },
     {
         "course_id": "pe-601", "slug": "prompt-engineering",
@@ -186,8 +207,9 @@ COURSES = [
         "duration": "8 weeks", "level": "Beginner", "price": 109999, "original_price": 179999,
         "image_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
         "category": "Generative AI", "tags": ["GPT-5", "Claude", "Gemini", "LangChain"],
-        "instructor": {"name": "Kavya Nair", "role": "GenAI Lead", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["Fastest growing skill", "Multi-LLM coverage", "Industry certificate"]
+        "instructor": {"name": "Nikhil Yadav", "role": "Cofounder HypeneuronAi", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"},
+        "highlights": ["Fastest growing skill", "Multi-LLM coverage", "Industry certificate"],
+        "popular": 0
     },
     {
         "course_id": "aai-701", "slug": "agentic-ai-cloud-agnostic",
@@ -205,26 +227,10 @@ COURSES = [
         "image_url": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["LangGraph", "CrewAI", "AutoGen", "Docker"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["Multi-cloud ready", "3 agent frameworks", "Enterprise patterns"]
+        "highlights": ["Multi-cloud ready", "3 agent frameworks", "Enterprise patterns"],
+        "popular": 1
     },
-    {
-        "course_id": "aws-801", "slug": "aws-agentic-ai",
-        "title": "AWS Agentic AI",
-        "subtitle": "Build AI agents on Amazon's cloud ecosystem",
-        "description": "Master building and deploying AI agents on AWS. Learn Bedrock, SageMaker, Lambda, and AWS-native agent patterns.",
-        "why_select": ["Official AWS-aligned curriculum", "Master Amazon Bedrock agents and knowledge bases", "Build serverless AI pipelines with Lambda & Step Functions", "AWS certification preparation included"],
-        "syllabus": [
-            {"module": "AWS AI Foundations", "topics": ["Bedrock overview", "SageMaker basics", "IAM for AI", "Cost optimization"], "weeks": "1-2"},
-            {"module": "Bedrock Agents", "topics": ["Agent creation", "Knowledge bases", "Action groups", "Guardrails"], "weeks": "3-5"},
-            {"module": "Serverless AI Pipelines", "topics": ["Lambda functions", "Step Functions", "EventBridge", "API Gateway"], "weeks": "6-8"},
-            {"module": "Production & Scaling", "topics": ["ECS/EKS deployment", "CloudWatch monitoring", "A/B testing", "Multi-region"], "weeks": "9-10"}
-        ],
-        "duration": "10 weeks", "level": "Intermediate", "price": 229999, "original_price": 399999,
-        "image_url": "https://images.unsplash.com/photo-1770169272345-9636d5ef2681?q=80&w=800&auto=format&fit=crop",
-        "category": "Agentic AI", "tags": ["AWS Bedrock", "SageMaker", "Lambda", "CloudFormation"],
-        "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["AWS certified path", "Bedrock mastery", "Serverless focus"]
-    },
+
     {
         "course_id": "az-901", "slug": "azure-agentic-ai",
         "title": "Azure Agentic AI",
@@ -241,7 +247,8 @@ COURSES = [
         "image_url": "https://images.unsplash.com/photo-1584381296550-99dfc0837d42?q=80&w=800&auto=format&fit=crop",
         "category": "Agentic AI", "tags": ["Azure OpenAI", "Copilot Studio", "Semantic Kernel", "Power Platform"],
         "instructor": {"name": "Rohan Gupta", "role": "AI Architect", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"},
-        "highlights": ["Enterprise #1 choice", "Copilot Studio", "Azure certified"]
+        "highlights": ["Enterprise #1 choice", "Copilot Studio", "Azure certified"],
+        "popular": 0
     },
     {
         "course_id": "ops-1001", "slug": "aiops",
@@ -473,7 +480,7 @@ async def submit_contact(body: ContactInput):
 
 @api_router.get("/")
 async def root():
-    return {"message": "KEEN API is running"}
+    return {"message": "Squarerootz API is running"}
 
 # Include router
 app.include_router(api_router)

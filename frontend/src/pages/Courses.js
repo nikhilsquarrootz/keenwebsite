@@ -35,10 +35,10 @@ export default function Courses() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div {...stagger} transition={{ type: "spring", stiffness: 100, damping: 20 }} className="mb-12">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-keen-black tracking-tight text-balance mb-4">
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-Squarerootz-black tracking-tight text-balance mb-4">
             All Courses
           </h1>
-          <p className="text-base md:text-lg text-keen-secondary max-w-xl">
+          <p className="text-base md:text-lg text-Squarerootz-secondary max-w-xl">
             10 comprehensive programs to take your AI career to the next level.
           </p>
         </motion.div>
@@ -46,12 +46,12 @@ export default function Courses() {
         {/* Filters */}
         <div className="flex flex-col md:flex-row gap-4 mb-10" data-testid="course-filters">
           <div className="relative flex-1 max-w-md">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-keen-tertiary" />
+            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-Squarerootz-tertiary" />
             <Input
               placeholder="Search courses or technologies..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="pl-11 h-12 rounded-2xl bg-white/50 border-keen-black/10 focus:border-keen-black/30 focus:ring-0 backdrop-blur-sm"
+              className="pl-11 h-12 rounded-2xl bg-white/50 border-Squarerootz-black/10 focus:border-Squarerootz-black/30 focus:ring-0 backdrop-blur-sm"
               data-testid="course-search-input"
             />
           </div>
@@ -59,7 +59,7 @@ export default function Courses() {
             <button
               onClick={() => setActiveCategory("all")}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === "all" ? "bg-keen-black text-white" : "bg-white/50 border border-keen-black/10 text-keen-secondary hover:bg-white"
+                activeCategory === "all" ? "bg-Squarerootz-black text-white" : "bg-white/50 border border-Squarerootz-black/10 text-Squarerootz-secondary hover:bg-white"
               }`}
               data-testid="filter-all"
             >
@@ -70,7 +70,7 @@ export default function Courses() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === cat ? "bg-keen-black text-white" : "bg-white/50 border border-keen-black/10 text-keen-secondary hover:bg-white"
+                  activeCategory === cat ? "bg-Squarerootz-black text-white" : "bg-white/50 border border-Squarerootz-black/10 text-Squarerootz-secondary hover:bg-white"
                 }`}
                 data-testid={`filter-${cat.toLowerCase().replace(/\s/g, '-')}`}
               >
@@ -91,6 +91,14 @@ export default function Courses() {
               <Link to={`/courses/${course.slug}`} data-testid={`course-card-${course.slug}`}>
                 <div className="group glass-card rounded-3xl overflow-hidden hover:bg-white/60 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1 transition-all duration-500 h-full flex flex-col">
                   <div className="aspect-[16/9] overflow-hidden bg-beige-subtle">
+{course.popular ==1 && (
+    <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10">
+      <div className="px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-Squarerootz-black text-white shadow-lg backdrop-blur-md bg-opacity-90 border border-white/10">
+        Popular
+      </div>
+    </div>
+  )}
+
                     <img
                       src={course.image_url}
                       alt={course.title}
@@ -100,26 +108,26 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="outline" className="rounded-full text-[10px] border-keen-black/10 bg-beige/80 font-mono">
+                      <Badge variant="outline" className="rounded-full text-[10px] border-Squarerootz-black/10 bg-beige/80 font-mono">
                         {course.category}
                       </Badge>
-                      <Badge variant="outline" className="rounded-full text-[10px] border-keen-black/10 bg-beige/80">
+                      <Badge variant="outline" className="rounded-full text-[10px] border-Squarerootz-black/10 bg-beige/80">
                         {course.level}
                       </Badge>
                     </div>
-                    <h3 className="font-heading font-bold text-lg text-keen-black tracking-tight mb-1">{course.title}</h3>
-                    <p className="text-sm text-keen-tertiary mb-4 line-clamp-2 flex-1">{course.subtitle}</p>
+                    <h3 className="font-heading font-bold text-lg text-Squarerootz-black tracking-tight mb-1">{course.title}</h3>
+                    <p className="text-sm text-Squarerootz-tertiary mb-4 line-clamp-2 flex-1">{course.subtitle}</p>
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {course.tags?.slice(0, 3).map(tag => (
-                        <span key={tag} className="text-[10px] font-mono text-keen-secondary bg-keen-black/5 px-2 py-0.5 rounded-full">{tag}</span>
+                        <span key={tag} className="text-[10px] font-mono text-Squarerootz-secondary bg-Squarerootz-black/5 px-2 py-0.5 rounded-full">{tag}</span>
                       ))}
                     </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-keen-black/5">
+                    <div className="flex items-center justify-between pt-4 border-t border-Squarerootz-black/5">
                       <div className="flex items-baseline gap-2">
-                        <span className="font-mono font-bold text-keen-black">&#8377;{course.price?.toLocaleString('en-IN')}</span>
-                        <span className="font-mono text-xs text-keen-tertiary line-through">&#8377;{course.original_price?.toLocaleString('en-IN')}</span>
+                        <span className="font-mono font-bold text-Squarerootz-black">&#8377;{course.price?.toLocaleString('en-IN')}</span>
+                        <span className="font-mono text-xs text-Squarerootz-tertiary line-through">&#8377;{course.original_price?.toLocaleString('en-IN')}</span>
                       </div>
-                      <span className="text-xs text-keen-secondary font-medium">{course.duration}</span>
+                      <span className="text-xs text-Squarerootz-secondary font-medium">{course.duration}</span>
                     </div>
                   </div>
                 </div>
@@ -130,7 +138,7 @@ export default function Courses() {
 
         {filtered.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-keen-tertiary text-lg">No courses found matching your search.</p>
+            <p className="text-Squarerootz-tertiary text-lg">No courses found matching your search.</p>
           </div>
         )}
       </div>

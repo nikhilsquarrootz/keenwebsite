@@ -1,6 +1,6 @@
 {
   "identity": {
-    "name": "KEEN",
+    "name": "Squarerootz",
     "aesthetic": "Warm Apple-Vision-Pro Minimalist",
     "core_principles": [
       "Liquid Glass: Surfaces feel like milled crystal, not plastic.",
@@ -70,7 +70,7 @@
     "marketing": {
       "grid": "grid-cols-12 gap-6",
       "hero": "Full height (min-h-[90vh]), text-center or asymmetric split. Must use 3D Liquid Element.",
-      "bento_grid": "Use for 'Why KEEN' and 'Features'. Mix 1x1, 2x1, and 2x2 cells."
+      "bento_grid": "Use for 'Why Squarerootz' and 'Features'. Mix 1x1, 2x1, and 2x2 cells."
     },
     "dashboard": {
       "grid": "grid-cols-1 md:grid-cols-4 gap-6",

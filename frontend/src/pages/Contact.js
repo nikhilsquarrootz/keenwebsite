@@ -41,11 +41,11 @@ export default function Contact() {
     <div className="min-h-screen bg-beige pt-28 pb-16 px-6" data-testid="contact-page">
       <div className="max-w-5xl mx-auto">
         <motion.div {...fadeUp} className="text-center mb-14">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-keen-black tracking-tight text-balance mb-4">
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-Squarerootz-black tracking-tight text-balance mb-4">
             Get in Touch
           </h1>
-          <p className="text-base md:text-lg text-keen-secondary max-w-xl mx-auto">
-            Have a question about our courses? Want to partner with KEEN? We'd love to hear from you.
+          <p className="text-base md:text-lg text-Squarerootz-secondary max-w-xl mx-auto">
+            Have a question about our courses? Want to partner with Squarerootz? We'd love to hear from you.
           </p>
         </motion.div>
 
@@ -53,17 +53,17 @@ export default function Contact() {
           {/* Contact Info */}
           <motion.div {...fadeUp} className="space-y-5">
             {[
-              { icon: Mail, label: "Email", value: "hello@keen.ai" },
+              { icon: Mail, label: "Email", value: "hello@Squarerootz.ai" },
               { icon: MapPin, label: "Office", value: "Bengaluru, India" },
               { icon: Phone, label: "Phone", value: "+91 80 1234 5678" },
             ].map(item => (
               <div key={item.label} className="glass-card rounded-2xl p-5 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-keen-black/5 flex items-center justify-center flex-shrink-0">
-                  <item.icon size={18} className="text-keen-black" />
+                <div className="w-10 h-10 rounded-xl bg-Squarerootz-black/5 flex items-center justify-center flex-shrink-0">
+                  <item.icon size={18} className="text-Squarerootz-black" />
                 </div>
                 <div>
-                  <div className="text-xs text-keen-tertiary">{item.label}</div>
-                  <div className="text-sm font-medium text-keen-black">{item.value}</div>
+                  <div className="text-xs text-Squarerootz-tertiary">{item.label}</div>
+                  <div className="text-sm font-medium text-Squarerootz-black">{item.value}</div>
                 </div>
               </div>
             ))}
@@ -74,56 +74,56 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 space-y-5" data-testid="contact-form">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm font-medium text-keen-black">Name *</Label>
+                  <Label htmlFor="name" className="text-sm font-medium text-Squarerootz-black">Name *</Label>
                   <Input
                     id="name"
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     placeholder="Your name"
-                    className="h-12 rounded-xl bg-white/50 border-keen-black/10 focus:border-keen-black/30 focus:ring-0 backdrop-blur-sm"
+                    className="h-12 rounded-xl bg-white/50 border-Squarerootz-black/10 focus:border-Squarerootz-black/30 focus:ring-0 backdrop-blur-sm"
                     data-testid="contact-name"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-medium text-keen-black">Email *</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-Squarerootz-black">Email *</Label>
                   <Input
                     id="email"
                     type="email"
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
                     placeholder="you@example.com"
-                    className="h-12 rounded-xl bg-white/50 border-keen-black/10 focus:border-keen-black/30 focus:ring-0 backdrop-blur-sm"
+                    className="h-12 rounded-xl bg-white/50 border-Squarerootz-black/10 focus:border-Squarerootz-black/30 focus:ring-0 backdrop-blur-sm"
                     data-testid="contact-email"
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject" className="text-sm font-medium text-keen-black">Subject</Label>
+                <Label htmlFor="subject" className="text-sm font-medium text-Squarerootz-black">Subject</Label>
                 <Input
                   id="subject"
                   value={form.subject}
                   onChange={e => setForm({ ...form, subject: e.target.value })}
                   placeholder="What's this about?"
-                  className="h-12 rounded-xl bg-white/50 border-keen-black/10 focus:border-keen-black/30 focus:ring-0 backdrop-blur-sm"
+                  className="h-12 rounded-xl bg-white/50 border-Squarerootz-black/10 focus:border-Squarerootz-black/30 focus:ring-0 backdrop-blur-sm"
                   data-testid="contact-subject"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-sm font-medium text-keen-black">Message *</Label>
+                <Label htmlFor="message" className="text-sm font-medium text-Squarerootz-black">Message *</Label>
                 <Textarea
                   id="message"
                   value={form.message}
                   onChange={e => setForm({ ...form, message: e.target.value })}
                   placeholder="Tell us more..."
                   rows={5}
-                  className="rounded-xl bg-white/50 border-keen-black/10 focus:border-keen-black/30 focus:ring-0 backdrop-blur-sm resize-none"
+                  className="rounded-xl bg-white/50 border-Squarerootz-black/10 focus:border-Squarerootz-black/30 focus:ring-0 backdrop-blur-sm resize-none"
                   data-testid="contact-message"
                 />
               </div>
               <Button
                 type="submit"
                 disabled={sending}
-                className="rounded-full bg-keen-black text-white hover:bg-keen-black/90 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl px-8 h-12 font-medium"
+                className="rounded-full bg-Squarerootz-black text-white hover:bg-Squarerootz-black/90 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl px-8 h-12 font-medium"
                 data-testid="contact-submit"
               >
                 {sending ? "Sending..." : "Send Message"} <Send size={16} className="ml-2" />

@@ -1,7 +1,7 @@
-# KEEN - AI EdTech Platform PRD
+# Squarerootz - AI EdTech Platform PRD
 
 ## Original Problem Statement
-Build an AI EdTech startup called KEEN that teaches AI-related courses with Apple design + Liquid Glass principles.
+Build an AI EdTech startup called Squarerootz that teaches AI-related courses with Apple design + Liquid Glass principles.
 
 ## Architecture
 - **Frontend**: React + Tailwind CSS + shadcn/ui + Framer Motion
