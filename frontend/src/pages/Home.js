@@ -33,7 +33,7 @@ const WHY_Squarerootz = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Ananya R.", role: "ML Engineer at Google", text: "Squarerootz's ML course was the turning point. The hands-on projects prepared me better than my entire CS degree.", avatar: "A" },
+  { name: "Ananya R.", role: "ML Engineer", text: "Squarerootz's ML course was the turning point. The hands-on projects prepared me better than my entire CS degree.", avatar: "A" },
   { name: "Rahul M.", role: "AI Consultant", text: "The Agentic AI course is simply unmatched. I went from zero to building production agents in 12 weeks.", avatar: "R" },
   { name: "Sneha K.", role: "NLP Researcher", text: "The depth of NLP curriculum here rivals graduate programs. And the community is incredible.", avatar: "S" },
 ];
