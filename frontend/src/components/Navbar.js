@@ -32,7 +32,7 @@ export default function Navbar() {
     alt="Squarerootz Logo" 
    className="w-6 h-6 rounded-full object-cover"
   /><span className="leading-none">Squarerootz</span>
-      // Squarerootz
+ 
         </Link>
 
         {/* Desktop Links */}
