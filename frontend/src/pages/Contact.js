@@ -144,7 +144,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { useForm } from "@formspree/react"; // Simplified import
+import { useForm } from "@formspree/react";
 import axios from "axios";
 import { API } from "@/App";
 
@@ -155,16 +155,18 @@ const fadeUp = {
 };
 
 export default function Contact() {
+  // Local state for controlled inputs and Axios
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
-  
-  // 1. Initialize Formspree hook
+
+  // Formspree hook
   const [state, sendToFormspree] = useForm("mpqjrrrn");
 
   const handleSubmit = async (e) => {
+    // 1. Prevent default browser behavior
     e.preventDefault();
 
-    // Basic Validation
+    // 2. Validation
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in all required fields.");
       return;
@@ -173,15 +175,17 @@ export default function Contact() {
     setSending(true);
 
     try {
-      // 2. Fire both requests concurrently using Promise.all
-      // This ensures both backend and email are handled
+      // 3. Send to both destinations simultaneously
+      // We pass the event 'e' to Formspree so it can read the 'name' attributes
       await Promise.all([
         axios.post(`${API}/contact`, form),
-        sendToFormspree(form) // Formspree hook accepts the data object directly
+        sendToFormspree(e) 
       ]);
 
+      // 4. Success handling
       toast.success("Message sent! We'll get back to you soon.");
       setForm({ name: "", email: "", subject: "", message: "" });
+      
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("Failed to send message. Please try again.");
@@ -224,13 +228,17 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div {...fadeUp} className="md:col-span-2">
-            <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 space-y-5" data-testid="contact-form">
+            <form 
+              onSubmit={handleSubmit} 
+              className="glass-card rounded-3xl p-8 space-y-5" 
+              data-testid="contact-form"
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-sm font-medium text-Squarerootz-black">Name *</Label>
                   <Input
                     id="name"
-                    name="name" // Added for Formspree accessibility
+                    name="name" // REQUIRED for Formspree
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     placeholder="Your name"
@@ -242,7 +250,7 @@ export default function Contact() {
                   <Label htmlFor="email" className="text-sm font-medium text-Squarerootz-black">Email *</Label>
                   <Input
                     id="email"
-                    name="email" // Added for Formspree accessibility
+                    name="email" // REQUIRED for Formspree
                     type="email"
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
@@ -256,7 +264,7 @@ export default function Contact() {
                 <Label htmlFor="subject" className="text-sm font-medium text-Squarerootz-black">Subject</Label>
                 <Input
                   id="subject"
-                  name="subject"
+                  name="subject" // REQUIRED for Formspree
                   value={form.subject}
                   onChange={e => setForm({ ...form, subject: e.target.value })}
                   placeholder="What's this about?"
@@ -268,7 +276,7 @@ export default function Contact() {
                 <Label htmlFor="message" className="text-sm font-medium text-Squarerootz-black">Message *</Label>
                 <Textarea
                   id="message"
-                  name="message"
+                  name="message" // REQUIRED for Formspree
                   value={form.message}
                   onChange={e => setForm({ ...form, message: e.target.value })}
                   placeholder="Tell us more..."
