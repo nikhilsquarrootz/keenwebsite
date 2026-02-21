@@ -26,12 +26,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-auto" data-testid="navbar">
       <div className="glass-navbar rounded-full px-4 md:px-6 h-14 flex items-center gap-2 md:gap-6">
-        <Link to="/" className="font-heading font-extrabold text-xl tracking-tight text-Squarerootz-black mr-2 md:mr-6" data-testid="nav-logo">
-          <img 
-    src="/images/sqrtlogo.png" 
-    alt="Squarerootz Logo" 
-    className="w-9 h-9 object-contain" 
-  /><span className="leading-none">Squarerootz</span>
+  //       <Link to="/" className="font-heading font-extrabold text-xl tracking-tight text-Squarerootz-black mr-2 md:mr-6" data-testid="nav-logo">
+  //         <img 
+  //   src="/images/sqrtlogo.png" 
+  //   alt="Squarerootz Logo" 
+  //   className="w-9 h-9 object-contain" 
+  // /><span className="leading-none">Squarerootz</span>
       Squarerootz
         </Link>
 
