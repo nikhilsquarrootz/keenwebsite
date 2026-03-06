@@ -210,7 +210,7 @@ export default function Contact() {
           {/* Contact Info */}
           <motion.div {...fadeUp} className="space-y-5">
             {[
-              { icon: Mail, label: "Email", value: "mo.wajahat@Squarerootz.ai" },
+              { icon: Mail, label: "Email", value: "mo.wajahat@Squarerootz.com" },
               { icon: MapPin, label: "Office", value: "Bengaluru, India" },
               { icon: Phone, label: "Phone", value: "+91 90058-11616" },
             ].map(item => (
