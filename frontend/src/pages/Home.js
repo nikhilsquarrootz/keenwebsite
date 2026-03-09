@@ -33,9 +33,15 @@ const WHY_Squarerootz = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Ananya R.", role: "ML Engineer", text: "Squarerootz's ML course was the turning point. The hands-on projects prepared me better than my entire CS degree.", avatar: "A" },
-  { name: "Rahul M.", role: "AI Consultant", text: "The Agentic AI course is simply unmatched. I went from zero to building production agents in 12 weeks.", avatar: "R" },
-  { name: "Sneha K.", role: "NLP Researcher", text: "The depth of NLP curriculum here rivals graduate programs. And the community is incredible.", avatar: "S" },
+  { name: "Loganathan Kumarasamy", role: "Chapter Lead at ANZ, AWS SAA", text: "The ML knowledge shared during the training, labs, and project assessments was exceptional. Truly grateful for the guidance.", avatar: "L" },
+  { name: "Shankari Arrun Ravi", role: "Software Architect at Bosch", text: "Lucky to be trained under Mohammad Wajahat. The live classes and projects really helped understand complex concepts better.", avatar: "S" },
+  { name: "Rajat Saha", role: "AI/ML at Purdue University", text: "The concepts were complicated but explained so well that it became easy to understand. Great teaching methodology.", avatar: "R" },
+  { name: "Anjum Rohra", role: "NASA-ISRO NISAR Project", text: "Concepts were so well explained. The day-to-day assignments helped me become completely thorough with all the concepts.", avatar: "A" },
+  { name: "Praveenkumar S", role: "Software Engineer at Bosch", text: "Wonderful sessions on data science and machine learning. Great experience learning concepts and working with industrial projects.", avatar: "P" },
+  { name: "Ravindra Varshney", role: "Executive Director at JPMorgan Chase", text: "Great detailed teaching on NLP, tf-IDF calculations, RNN, LSTM, and GRU. Excellent coverage for Deep Learning.", avatar: "R" },
+  { name: "Sachin Sethi", role: "Data Scientist", text: "Amazing lectures and valuable knowledge sharing. Successfully completed the Mercedes-Benz Greener Manufacturing project.", avatar: "S" },
+  { name: "Shubham Sharma", role: "Data Science & ML Learner", text: "Clears most doubts regarding Machine Learning and career guidance. Tells how deep this field is and how to dive into it.", avatar: "S" },
+  { name: "Rajkamal Udayasuriyan", role: "Professional", text: "Highly impressed with the passion for teaching. The Theory-Practical-Self Exercise-Home Exercise pattern is excellent.", avatar: "R" },
 ];
 
 export default function Home() {
@@ -196,19 +202,20 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="py-20 px-6" data-testid="testimonials-section">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-14">
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-Squarerootz-black tracking-tight">
               What Our Learners Say
             </h2>
+            <p className="text-sm text-Squarerootz-tertiary mt-4">Scroll to see more testimonials →</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {TESTIMONIALS.map((t, i) => (
               <motion.div
                 key={t.name}
                 {...stagger}
                 transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.1 }}
-                className="glass-card rounded-3xl p-8 hover:bg-white/60 transition-all duration-300"
+                className="glass-card rounded-3xl p-8 hover:bg-white/60 transition-all duration-300 flex-shrink-0 w-[calc(100%-2rem)] md:w-[calc(33.333%-1rem)] snap-start"
               >
                 <p className="text-sm text-Squarerootz-secondary leading-relaxed mb-6">"{t.text}"</p>
                 <div className="flex items-center gap-3">
