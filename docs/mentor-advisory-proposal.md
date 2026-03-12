@@ -16,7 +16,7 @@ This is not a full-time commitment. We're looking for practitioners who want to 
 
 ## Why We're Reaching Out to You
 
-Your experience in **[SPECIFIC DOMAIN - e.g., Agentic AI / MLOps / Computer Vision / etc.]** aligns with our mission to deliver production-relevant education. We've reviewed your work in **[SPECIFIC CONTEXT - e.g., your contributions to X, your role at Y, your content on Z]** and believe your perspective would be valuable to our students and curriculum.
+Your experience in **AI/ML** aligns with our mission to deliver production-relevant education. We've reviewed your work in **AI/ML** and believe your perspective would be valuable to our students and curriculum.
 
 We're not looking for course creators or full-time instructors. We're looking for practitioners who are actively working in the field and can bring real-world authenticity to our programs.
 
@@ -197,17 +197,3 @@ Squarerootz is an AI education platform focused on practical, job-market-aligned
 - **Production focus:** Every course includes real-world projects, not toy examples
 
 We're a growing team passionate about making AI education authentic and effective.
-
----
-
-## Contact
-
-**[Your Name]**
-Founder, Squarerootz
-Email: [your-email]
-Phone: [your-phone]
-Website: [squarerootz-url]
-
----
-
-*This proposal is confidential and intended solely for the recipient. Please do not share without permission.*
